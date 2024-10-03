@@ -7,14 +7,14 @@ app.use(cookieParser(process.env.COOKIE_SECRET));
 
 // Middlewares
 app.use(express.json());
-
-app.use(
-    cors({
-        origin: "*", // Allow requests from any origin
-        methods: ["GET,POST,DELETE,PUT,PATCH"],
-        credentials: true, // You can disable this if your frontend doesn't require credentials
-    })
-);
+ 
+// app.use(
+//     cors({
+//         origin: "*", // Allow requests from any origin
+//         methods: ["GET,POST,DELETE,PUT,PATCH"],
+//         credentials: true, // You can disable this if your frontend doesn't require credentials
+//     })
+// );
 
 
 // Custom Middlewares
@@ -35,7 +35,7 @@ app.use("/api/v1/Users", authenticateUser, UserRouter);
 app.use("/api/v1/Auth", AuthRouter);
 app.use("/api/v1/Admin", authenticateUser, AdminRouter);
 app.use("/api/v1/Application", authenticateUser, ApplicationRouter);
-
+ 
 module.exports = app;
 
 
