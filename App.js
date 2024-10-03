@@ -7,14 +7,15 @@ app.use(cookieParser(process.env.COOKIE_SECRET));
 
 // Middlewares
 app.use(express.json());
+
 app.use(
     cors({
-        // origin: ["http://localhost:5173"], //localhost IP 
-        origin: ["http://195.35.25.14:4173"], // Your frontend IP
+        origin: "*", // Allow requests from any origin
         methods: ["GET,POST,DELETE,PUT,PATCH"],
-        credentials: true,
+        credentials: true, // You can disable this if your frontend doesn't require credentials
     })
 );
+
 
 // Custom Middlewares
 const {
