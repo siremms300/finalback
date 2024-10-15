@@ -1,4 +1,4 @@
-
+  
 const express = require("express");
 const SchoolRouter = express.Router(); // create a router
 
@@ -55,6 +55,76 @@ SchoolRouter.route("/:id")
     );
 
 module.exports = SchoolRouter;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const express = require("express");
+// const SchoolRouter = express.Router(); // create a router
+
+// // Controllers
+// const SchoolController = require("../Controller/SchoolController");
+// const { checkSchoolInput } = require("../Validation/SchoolDataRules");
+// const {
+//     inputValidationMiddleware,
+// } = require("../Validation/ValidationMiddleware");
+
+// // Routes
+// SchoolRouter.route("/")
+//     .get(SchoolController.getAllSchools)
+//     .post(
+//         checkSchoolInput,
+//         inputValidationMiddleware,
+//         SchoolController.addSchool
+//     )
+//     .delete(SchoolController.deleteAllSchools);
+
+// // Separate route for filtering and searching schools
+// SchoolRouter.route("/search")
+//     .get(SchoolController.getSearchedAndFilteredSchools);
+
+// // Route for bulk insertion of schools
+// SchoolRouter.route("/bulk")
+//     .post(SchoolController.addMultipleSchools);
+
+// SchoolRouter.get("/my-schools", SchoolController.getMySchools);
+// SchoolRouter.route("/:id")
+//     .get(SchoolController.getSingleSchool)
+//     .patch(
+//         checkSchoolInput,
+//         inputValidationMiddleware,
+//         SchoolController.updateSingleSchool
+//     )
+//     .delete(SchoolController.deleteSingleSchool);
+
+// module.exports = SchoolRouter;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

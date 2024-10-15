@@ -9,11 +9,15 @@ app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use(express.json());
 app.use(
     cors({
-        origin: ["http://localhost:5173"],
+        origin: ["http://localhost:5173"],   //195.35.25.14
         methods: ["GET,POST,DELETE,PUT,PATCH"],
         credentials: true,
+        allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With", "Origin", "Accept"]
     })
 );
+
+
+
 
 // Custom Middlewares
 const {
@@ -29,6 +33,7 @@ const ApplicationRouter = require("./Router/ApplicationRouter");
 
 // Connecting routes
 app.use("/api/v1/Schools", authenticateUser, SchoolRouter); // Updated route for Schools
+// app.use("/api/v1/Schools", SchoolRouter); // Updated route for Schools
 app.use("/api/v1/Users", authenticateUser, UserRouter);
 app.use("/api/v1/Auth", AuthRouter);
 app.use("/api/v1/Admin", authenticateUser, AdminRouter);

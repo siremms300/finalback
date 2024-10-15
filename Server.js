@@ -5,10 +5,11 @@ const app = require("./App");
 // DB Connection
 const DBConnectionHandler = require("./Utils/DBconnect");
 DBConnectionHandler();
-
+// 195.35.25.14
 const port = process.env.PORT || 3000;
+// const host = '195.35.25.14';
 
-app.get("/", (req, res) => {
+app.get("/", (req, res) => { 
     res.send("Scovers Server is running!");
 });
 // 404 Error handler
@@ -31,4 +32,9 @@ app.use((err, req, res, next) => {
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`); 
+    // console.log(`Server is running on ${host}:${port}`);
 });
+
+
+// require = require("esm")(module) 
+// module.exports = require("./index.js")

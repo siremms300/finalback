@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 async function DBConnectionHandler() {
     try {
         await mongoose.connect(process.env.DB_STRING);
-        console.log("DB connected successfully");
+        console.log("DB conected successfully");
     } catch (err) {
         console.log(`There is an error id DB: ${err.message}`);
         process.exit(1);
@@ -12,3 +12,8 @@ async function DBConnectionHandler() {
 }
 
 module.exports = DBConnectionHandler;
+
+
+
+
+
