@@ -19,13 +19,15 @@ app.use(
 
 
 
+
+
 // Custom Middlewares
 const {
     authenticateUser,
 } = require("./Middleware/UserAuthenticationMiddleware");
 
 // Routers
-const SchoolRouter = require("./Router/SchoolRouter"); // Updated to SchoolRouter
+const SchoolRouter = require("./Router/SchoolRouter"); // Updated to SchoolRouter 
 const UserRouter = require("./Router/UserRouter");
 const AuthRouter = require("./Router/AuthRouter");
 const AdminRouter = require("./Router/AdminRouter");

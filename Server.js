@@ -6,7 +6,7 @@ const app = require("./App");
 const DBConnectionHandler = require("./Utils/DBconnect");
 DBConnectionHandler();
 const port = process.env.PORT || 3000;
-const host = '195.35.25.14';
+// const host = '195.35.25.14';
 
 app.get("/", (req, res) => { 
     res.send("Scovers Server is running!");
@@ -30,8 +30,8 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(port, () => {
-    // console.log(`Server is running on port ${port}`); 
-    console.log(`Server is running on ${host}:${port}`);
+    console.log(`Server is running on port ${port}`); 
+    // console.log(`Server is running on ${host}:${port}`);
 });
 
 
