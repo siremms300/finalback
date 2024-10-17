@@ -8,18 +8,16 @@ app.use(cookieParser(process.env.COOKIE_SECRET));
 // Middlewares
 app.use(express.json());
 
- 
 app.use(
     cors({
-        origin: "*", // Allow requests from any origin
+        origin: ["http://195.35.25.14:4173", "http://localhost:5173"],   //http://195.35.25.14:4173
         methods: ["GET,POST,DELETE,PUT,PATCH"],
-        credentials: true, // You can disable this if your frontend doesn't require credentials
+        credentials: true,
+        allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With", "Origin", "Accept"]
     })
 );
 
-
-
-
+// sudo vim /etc/nginx/sites-available/default
 
 // Custom Middlewares
 const {
