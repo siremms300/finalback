@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.use(
     cors({
-        origin: ["http://195.35.25.14", "http://localhost:5173", "http://localhost:4173"],   //http://195.35.25.14:4173
+        origin: ["http://localhost:5173", "http://localhost:4173", "https://scovers.org"],   //http://localhost:3000:4173
         methods: ["GET,POST,DELETE,PUT,PATCH"],
         credentials: true,
         allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With", "Origin", "Accept"]
