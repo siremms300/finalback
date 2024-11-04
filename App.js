@@ -8,14 +8,39 @@ app.use(cookieParser(process.env.COOKIE_SECRET));
 // Middlewares
 app.use(express.json());
 
+// app.use(
+//     cors({
+//         origin: ["http://localhost:5173","https://scovers.org", "https://www.scovers.org", "http://195.35.25.14", "http://scovers.org"],   //http://localhost:3000:4173
+//         methods: ["GET,POST,DELETE,PUT,PATCH"],
+//         credentials: true,
+//         allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With", "Origin", "Accept"]
+//     })
+// );
+
+
 app.use(
     cors({
-        origin: ["http://localhost:5173","https://scovers.org", "http://195.35.25.14", "http://scovers.org"],   //http://localhost:3000:4173
-        methods: ["GET,POST,DELETE,PUT,PATCH"],
+        origin: [
+            "http://localhost:5173",
+            "https://scovers.org",
+            "https://www.scovers.org",
+            "http://195.35.25.14",
+            "http://scovers.org"
+        ],
+        methods: ["GET", "POST", "DELETE", "PUT", "PATCH"],
         credentials: true,
-        allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With", "Origin", "Accept"]
+        allowedHeaders: [
+            "Content-Type",
+            "Authorization",
+            "X-Requested-With",
+            "Origin",
+            "Accept",
+            "Cookie"
+        ]
     })
 );
+
+
 
 // sudo vim /etc/nginx/sites-available/default
 
