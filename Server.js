@@ -6,7 +6,7 @@ const app = require("./App");
 const DBConnectionHandler = require("./Utils/DBconnect");
 DBConnectionHandler();
 const port = process.env.PORT || 3000;
-// const host = 'http://195.35.25.14:3000';
+// const host = 'http://localhost:3000';
 
 app.get("/", (req, res) => { 
     res.send("Scovers Server is running!");
