@@ -62,18 +62,36 @@ const SchoolSchema = new mongoose.Schema(
             required: [true, "Contact information is required"],
             trim: true,
         },
+         satScore: {
+            type: Number,
+            min: [400, "SAT score must be at least 400"],
+            max: [1600, "SAT score cannot exceed 1600"],
+        },
+        toeflScore: {
+            type: Number,
+            min: [0, "TOEFL score must be at least 0"],
+            max: [120, "TOEFL score cannot exceed 120"],
+        },
+        greScore: {
+            type: Number,
+            min: [260, "GRE score must be at least 260"],
+            max: [340, "GRE score cannot exceed 340"],
+        },
+        studentAidAvailable: {
+            type: Boolean,
+            default: false, // Whether student aid is available
+        },
+        schoolRank: {
+            type: Number,
+            min: [1, "Rank must be at least 1"],
+            // required: [true, "School rank is required"], // Rank of the university
+        }, 
     },
     { timestamps: true } // to keep track of creation and updates
 );
 
 const SchoolModel = mongoose.model("School", SchoolSchema);
 module.exports = SchoolModel;
-
-
-
-
-
-
 
 
 

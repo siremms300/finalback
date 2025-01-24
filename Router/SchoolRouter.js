@@ -50,9 +50,9 @@ SchoolRouter.route("/:id")
         SchoolController.updateSingleSchool
     )
     .delete(
-        userAuthorizationHandler("recruiter"),
+        userAuthorizationHandler("recruiter"), 
         SchoolController.deleteSingleSchool
-    );
+    );  
 
 module.exports = SchoolRouter;
 
