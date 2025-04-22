@@ -140,7 +140,7 @@ const UserRouter = require("./Router/UserRouter");
 const AuthRouter = require("./Router/AuthRouter");
 const AdminRouter = require("./Router/AdminRouter");
 const ApplicationRouter = require("./Router/ApplicationRouter");
-const WebinarRouter = require("./Router/WebinarRouter")
+// const WebinarRouter = require("./Router/WebinarRouter")
 const SatRouter = require("./Router/SatRouter")
 const VisitorRouter = require("./Router/VisitorRouter")
 
@@ -157,7 +157,7 @@ app.use("/api/v1/Users", authenticateUser, UserRouter);
 app.use("/api/v1/Auth", AuthRouter);
 app.use("/api/v1/Admin", authenticateUser, AdminRouter);
 app.use("/api/v1/Application", authenticateUser, ApplicationRouter);
-app.use("/api/v1/Webinar", WebinarRouter);
+// app.use("/api/v1/Webinar", WebinarRouter);
 app.use("/api/v1/Sat", SatRouter);
 app.use("/api/v1/Visitor", VisitorRouter); 
  
