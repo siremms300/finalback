@@ -1,9 +1,9 @@
 const express = require('express');
 const VisitorRouter = express.Router();
-const visitorController = require('../Controller/VisitorController');
+const VisitorController = require('../Controller/VisitorController');
 
 // Webinar registration route
-VisitorRouter.post('/register', visitorController.visitorRegister);
-VisitorRouter.get('/registrations', visitorController.getVisitorRegistrations);
+VisitorRouter.post('/register', VisitorController.visitorRegister);
+VisitorRouter.get('/registrations', VisitorController.getVisitorRegistrations);
 
 module.exports = VisitorRouter;

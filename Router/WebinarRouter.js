@@ -1,9 +1,9 @@
 const express = require('express');
 const WebinarRouter = express.Router();
-const webinarController = require('../Controller/WebinarController');
+const WebinarController = require('../Controller/WebinarController');
 
 // Webinar registration route
-WebinarRouter.post('/register', webinarController.registerForWebinar);
-WebinarRouter.get('/registrations', webinarController.getWebinarRegistrations);
+WebinarRouter.post('/register', WebinarController.registerForWebinar);
+WebinarRouter.get('/registrations', WebinarController.getWebinarRegistrations);
 
 module.exports = WebinarRouter;

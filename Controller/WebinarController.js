@@ -1,5 +1,3 @@
- 
-
 const WebinarRegistration = require('../Model/WebinarModel');
 const nodemailer = require('nodemailer');
 const { v4: uuidv4 } = require('uuid');
