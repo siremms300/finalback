@@ -41,7 +41,7 @@ const SchoolSchema = new mongoose.Schema(
         },
         tuition: {
             type: Number,
-            required: [true, "Tuition fee is required"],
+            // required: [true, "Tuition fee is required"],
             trim: true,
         },
         scholarship: {
