@@ -56,6 +56,7 @@ const AuthRouter = require("./Router/AuthRouter");
 const AdminRouter = require("./Router/AdminRouter");
 const ApplicationRouter = require("./Router/ApplicationRouter");
 const WebinarRouter = require("./Router/WebinarRouter")
+const UniversityWebinarRouter = require("./Router/UniversityWebinarRouter")
 const SatRouter = require("./Router/SatRouter")
 const VisitorRouter = require("./Router/VisitorRouter")
 
@@ -66,6 +67,7 @@ app.use("/api/v1/Auth", AuthRouter);
 app.use("/api/v1/Admin", authenticateUser, AdminRouter);
 app.use("/api/v1/Application", authenticateUser, ApplicationRouter);
 app.use("/api/v1/Webinar", WebinarRouter);
+app.use("/api/v1/Universitywebinar", UniversityWebinarRouter);
 app.use("/api/v1/Sat", SatRouter);
 app.use("/api/v1/Visitor", VisitorRouter); 
   
