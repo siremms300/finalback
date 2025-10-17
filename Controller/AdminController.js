@@ -106,7 +106,7 @@ module.exports.updateUserRole = async (req, res, next) => {
     const { id, role } = req.body;
     try {
         if (!mongoose.Types.ObjectId.isValid(id)) {
-            next(createError(400, "Invalid User ID format"));
+            next(createError(400, "Invalid User ID format")); 
         } else {
             if (req?.user?.role !== "admin") {
                 next(createError(500, `You have no permission to update`));
@@ -120,7 +120,7 @@ module.exports.updateUserRole = async (req, res, next) => {
                 );
                 res.status(200).json({
                     status: true,
-                    message: "Role Updated",
+                    message: "Role Update success",
                 });
             }
         }
